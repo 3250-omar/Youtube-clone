@@ -27,6 +27,11 @@ const NavBar = () => {
       });
     navigate("/");
   };
+  const handleClick = (event) => {
+    if (event.key === "Enter") {
+      searchFunction();
+    }
+  };
   return (
     <nav className="flex-div">
       <div className="left-nav flex-div">
@@ -41,6 +46,7 @@ const NavBar = () => {
           placeholder="Search"
           onChange={(e) => setText(e.target.value)}
           value={text}
+          onKeyDown={(e) => handleClick(e)}
         />
         <img src={search} alt="" onClick={text ? searchFunction : () => {}} />
       </div>
