@@ -1,0 +1,84 @@
+.sideBar{
+    position: sticky;
+    left: 0;
+    width: 15%;
+    padding: 10px 2%;
+    img{
+        width: 20px;
+    }
+  
+    .short-links{
+        h3{
+            font-size: 13px;
+            margin: 10px 0;
+            color: #5a5a5a;
+        }
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+        margin-bottom: 20px;
+        
+        .side-link{
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            img{
+                padding-bottom: 5px;
+            }
+            &.active img{
+                border-bottom: 3px solid red;
+            }
+        }
+    }
+    hr{
+        height: 1px;
+        width: 85%;
+        border: 0;
+
+        background-color: #ccc;
+        margin-bottom: 20px;
+    }
+
+    .subscription{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        img{
+            border-radius: 50%;
+        }
+        h3{
+            font-size: 13px;
+            margin: 10px 0;
+            color: #5a5a5a;
+        }
+        .sub-channel{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+    }
+}
+.small-sideBar{
+    width: 5%;
+    hr{
+        width: 50%;
+    }
+    h3{
+        display: none;
+    }
+    .short-links .side-link p{
+        display: none;
+    }
+    .subscription .sub-channel p{
+        display: none;
+    }
+}
+@media screen and (max-width:800px) {
+    .sideBar{
+        display: none;
+    }
+}
