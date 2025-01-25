@@ -14,6 +14,7 @@ const Feed = () => {
   const searchData = useStore((store) => store.searchData);
   const data = useStore((store) => store.data);
   const setData = useStore((store) => store.setData);
+  
   const fetchData = async () => {
     const videoData_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=500&regionCode=EG&videoCategoryId=${category}&key=${Key}`;
     await axios
